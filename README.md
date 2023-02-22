@@ -25,3 +25,10 @@ Este es mi primer sitio. Se trata de mi auto biografia y algunos otros aspectos 
 
 - Se trata de un sitio web a "blanco y negro" (solo HTML), que hace uso de todas las etiquetas vistas hasta ahora: texto, videos, imagenes, links, tablas, formularios, etc.
 - Cada pagina manejara minimamente la plantilla de la pagina index.html
+
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;  
+    font-size: 150%;
+    font-family: 'Righteous', cursive;

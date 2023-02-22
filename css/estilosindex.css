@@ -7,18 +7,68 @@
     font-family: sans-serif;
     margin: 0;
     box-sizing: border-box;
-    background-color: rgb(255, 187, 162);
+    background-color: #212121;
 }
 .a{
     text-decoration: none;
     color: black ;
 }
+.pagetheme{
+    background-color: rgb(10, 10, 10);
+    display: flex;
+    justify-content: flex-end;
+}
+.switch {
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    --background: #28096b;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    transition: .5s;
+    border-radius: 30px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    box-shadow: inset 8px -4px 0px 0px #fff000;
+    background: var(--background);
+    transition: .5s;
+}
+input:checked + .slider {
+    background-color: #522ba7;
+}
+input:checked + .slider:before {
+    transform: translateX(100%);
+    box-shadow: inset 15px -4px 0px 15px #fff000;
+  }
 .encabezado{
     display: flex;
     min-height: 7px;
     justify-content: space-between;
     align-items: center;
-    background-color: aqua;
+    background-color: rgb(10, 10, 10);
     padding: 0%;
     margin-bottom: 0;
 }
@@ -26,7 +76,7 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
     padding-left: 50px;
     padding-right: 50px;
 }
@@ -34,61 +84,158 @@
     height: 100px;
     margin-right: 10px;
     margin-left: 15px;
+    margin-bottom: 10px;
 }
 .NamePage{
     font-family: 'Indie Flower', cursive;
 }
 .vinculos{
-    font-weight: 600;
     text-decoration: none;
-    color: black;
-    margin-right: 10px;  
-    font-size: 150%;
-    font-family: 'Righteous', cursive;
+    background-color: rgb(27, 26, 26);
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 10em;
+    border-radius: 1rem;
+    color: rgb(235, 204, 204);
+    box-shadow: 0 0.4rem #120f0f;
+    cursor: pointer;
 }
 .nav{
     padding-right: 50px;
     padding-left: 50px;
 }
-nav a:hover{
-    color: white;
-    font-size: 200%;
-}
+nav a:hover:not(:disabled) {
+    background: rgb(226, 205, 205);
+    color: rgb(12, 12, 12);
+    text-shadow: 0 0.1rem #bcb4b4;
+    font-size: 120%;
+   }
 nav a:active{
-    color: black;
+    color: white;
+    box-shadow: 0 0.2rem #dfd9d9;
+    transform: translateY(0.2rem);
 }
+button:disabled {
+    cursor: auto;
+    color: grey;
+   }
 .NombrePagina{
     font-family: 'Sassy Frass', cursive;
     font-size: 300%;
+    color: wheat;
 }
 .seccion1{
-    background-color: rgb(255, 187, 162);
+    background-color: #212121;
     margin-top: 0;
     min-height: 50px;
+    color: white;
 }
 .thola{
     font-family: 'Pacifico', cursive;
 }
 .seccion2{
     display: flex;
+    justify-content: space-between;
     height:100%;
+    background-color: #212121;
+    color: wheat;
 }
 .fotoyo{
-    margin-right: 300px;
-    margin-left: 200px;
     height: 300px;
     padding-bottom: 20px;
+    padding-right: 100px;
+    transition: 0.8s;
 }
 .parrafo{
     font-size: 150%;
     font-family: 'Satisfy', cursive;
     padding-top: 15px;
+    padding-left: 30px;
+    padding-right: 300px;
 }
 @media (max-width:974px){
      .encabezado{
         flex-direction: column;
      }
+     nav{
+        padding: 20px 0;
+     }
+     .fotoyo{
+        transition: 0.8s;
+        height: 200px;
+     }
      .vinculos{
         padding-bottom: 10px;
      }
+}
+@media (max-width:900px){
+    .parrafo{
+        padding-right: 200px;
+    }
+}
+@media (max-width:730px){
+    .parrafo{
+        padding-right: 150px;
+    }
+}
+@media (max-width:630px){
+    .parrafo{
+        padding-right: 50px;
+    }
+}
+html.dark-mode .pagetheme{
+    background-color: rgb(168, 238, 238);
+}
+html.dark-mode header{
+    background-color: rgb(168, 238, 238);
+}
+html.dark-mode .NombrePagina{
+    color: black;
+}
+html.dark-mode .logo{
+    color: black;
+}
+html.dark-mode .vinculos{
+    text-decoration: none;
+    background-color: #eee;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 10em;
+    border-radius: 1rem;
+    color: lightcoral;
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+    padding-bottom: 10px;
+}
+html.dark-mode nav{
+    padding-right: 50px;
+    padding-bottom: 10px;
+}
+html.dark-mode nav a:hover:not(:disabled) {
+    background: lightcoral;
+    color: white;
+    text-shadow: 0 0.1rem #bcb4b4;
+    font-size: 120%;
+   }
+html.dark-mode nav a:active{
+    color: white;
+    box-shadow: 0 0.2rem #dfd9d9;
+    transform: translateY(0.2rem);
+}
+html.dark-mode button:disabled {
+    cursor: auto;
+    color: grey;
+   }
+html.dark-mode .seccion1{
+    background-color: rgb(212, 237, 255);
+    color: black;
+}
+html.dark-mode .seccion2{
+    background-color: rgb(212, 237, 255);
+    color: black;
+}
+html.dark-mode .bodi{
+    background-color: rgb(212, 237, 255);
 }
