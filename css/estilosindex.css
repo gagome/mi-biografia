@@ -6,7 +6,6 @@
 .bodi{
     font-family: sans-serif;
     margin: 0;
-    box-sizing: border-box;
     background-color: #212121;
 }
 .a{
@@ -98,8 +97,10 @@ input:checked + .slider:before {
     width: 10em;
     border-radius: 1rem;
     color: rgb(235, 204, 204);
-    box-shadow: 0 0.4rem #120f0f;
+    box-shadow: 0 0.4rem #222020;
     cursor: pointer;
+    padding-bottom: 10px;
+
 }
 .nav{
     padding-right: 50px;
@@ -185,10 +186,10 @@ button:disabled {
     }
 }
 html.dark-mode .pagetheme{
-    background-color: rgb(168, 238, 238);
+    background-color: #F2DEBA;
 }
 html.dark-mode header{
-    background-color: rgb(168, 238, 238);
+    background-color: #F2DEBA;
 }
 html.dark-mode .NombrePagina{
     color: black;
@@ -229,13 +230,13 @@ html.dark-mode button:disabled {
     color: grey;
    }
 html.dark-mode .seccion1{
-    background-color: rgb(212, 237, 255);
+    background-color: #FAECD6;
     color: black;
 }
 html.dark-mode .seccion2{
-    background-color: rgb(212, 237, 255);
+    background-color: #FAECD6;
     color: black;
 }
 html.dark-mode .bodi{
-    background-color: rgb(212, 237, 255);
+    background-color: #FAECD6;
 }
