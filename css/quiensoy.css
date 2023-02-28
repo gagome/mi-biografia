@@ -314,7 +314,7 @@ button:disabled {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 20px 100px;
+  margin: 20px ;
   color: whitesmoke;
   font-size: 1.2rem;
 }
@@ -328,12 +328,16 @@ button:disabled {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 .seccion1 img{
+  transition: .5s;
   height: 300px;
   border-radius: .8em;
 }
 .linkfamilia{
+  transition: .5s;
   margin-left: 150px;
   text-decoration: none;
   color: black;
@@ -348,11 +352,12 @@ button:disabled {
   filter: invert(20%);
 }
 .seccion2 img{
+  transition: .5s;
   height: 300px;
-  margin-right:180px;
   border-radius: .8em;
 }
 .linkamigos{
+  transition: .5s;
   margin-left: 100px;
   text-decoration: none;
   color: black;
@@ -366,15 +371,30 @@ button:disabled {
 .linkamigos:hover{
   filter: invert(20%);
 }
-.articulo-f{
-  margin-left: 30%;
-}
-@media (max-width:813px){
+@media (max-width:1016px){
   .encabezado{
       flex-direction: column;
   }
   nav{
      padding: 20px 0;
+  }
+}
+@media (max-width:1010px){
+  .seccion1 img{
+    transition: .5s;
+    height: 150px;
+  }
+  .linkfamilia{
+    transition: .5s;
+    margin-left: 50px;
+  }
+  .seccion2 img{
+    transition: .5s;
+    height: 150px;
+  }
+  .linkamigos{
+    transition: .5s;
+    margin-left: 15px;
   }
 }
 html.dark-mode .pagetheme{
